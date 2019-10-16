@@ -22,16 +22,3 @@ and add in package.json file following code
 
 `sudo a2enmod headers`
 
-`npm install axios --save`
-
-`npm install --save react-router-dom`
-
-`npm install --save moment react-moment`
-
-`npm install react-responsive-carousel --save`
-
-`npm install react-slick --save`
-
-`npm install slick-carousel`
-
-`npm install react-coverflow`
