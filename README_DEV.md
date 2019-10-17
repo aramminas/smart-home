@@ -22,3 +22,9 @@ and add in package.json file following code
 
 `sudo a2enmod headers`
 
+`npm install react-bootstrap bootstrap`
+
+`npm install react-bus`
+
+`npm install react-hook-form`
+

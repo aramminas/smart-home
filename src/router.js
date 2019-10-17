@@ -2,13 +2,13 @@ import React from 'react';
 import { Route, Switch } from "react-router-dom";
 
 // components list
-// import Home from "./components/home/";
+import Home from "./components/Home/";
 
 
 
 const routes = (
     <Switch>
-        {/*<Route exact path="/" component={Home}/>*/}
+        <Route exact path="/" component={Home}/>
     </Switch>
 );
 
