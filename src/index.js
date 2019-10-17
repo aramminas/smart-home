@@ -49,7 +49,7 @@ class App extends Component{
 						<div id = "div4"></div>
 					</div>
 				</div>
-			</div> 
+			</div>
 		)
 	}
 }
