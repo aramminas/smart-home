@@ -7,6 +7,7 @@ import lock from './lock.png';
 import camera2 from './camera.png';
 import bell from './bell.png';
 import eye from './eye.png';
+import * as serviceWorker from './serviceWorker';
 
 class App extends Component{
 	render(){
@@ -14,31 +15,38 @@ class App extends Component{
 			<div id = "app">
 				<div id = "header" >	
 					<div id = "menubar">
-						<p id = "name" className = "p">Smart home</p>
-						<a className = "menuEl p">home</a>
-						<a className = "menuEl p">pages</a>
-						<a className = "menuEl p">portfolio</a>
+						<a className = "p">HOME</a>
+						<a className = "p">CONTACTS</a>
+						<a className = "p">SHOP</a>
+						<a className = "p" id = "button">SIGN IN</a>
 					</div>
 					<div id = "text">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<h1>SECURITY HOME</h1>
+						<p id = "firstText">MAKE YOUR LIFE MORE COMFORTABLE</p>
 					</div>
 				</div>
 				<div id = "main">
-					<div id = "div1">
-						<div className = "shieldsLeft" id = "shield1">
-							<img id = "img1" src = {lock} height = "50px" width = "50px"></img>
+					<div id =  "container1">
+						<div id = "div1">
+							<div className = "shield shieldsLeft" id = "shield1">
+								<img id = "img1" src = {lock}></img>
+							</div>
+							<div className = "shield shieldsLeft" id = "shield2">
+								<img id = "img2" src = {camera2}></img>
+							</div>
 						</div>
-						<div className = "shieldsLeft" id = "shield2">
-							<img id = "img2" src = {camera2} height = "50px" width = "50px"></img>
+						<div id = "div2">
+							<div className = "shield shieldsRight" id = "shield3">
+								<img id = "img3" src = {bell}></img>
+							</div>
+							<div className = "shield shieldsRight" id = "shield4">
+								<img id = "img4" src = {eye}></img>
+							</div>
 						</div>
 					</div>
-					<div id = "div2">
-						<div className = "shieldsRight" id = "shield4">
-							<img id = "img4" src = {eye} height = "50px" width = "50px"></img>
-						</div>
-						<div className = "shieldsRight" id = "shield3">
-							<img id = "img3" src = {bell} height = "50px" width = "50px"></img>
-						</div>
+					<div id = "container2">
+						<div id = "div3"></div>
+						<div id = "div4"></div>
 					</div>
 				</div>
 			</div>
@@ -47,3 +55,7 @@ class App extends Component{
 }
 ReactDOM.render(<App />, document.getElementById('root'));
 
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
