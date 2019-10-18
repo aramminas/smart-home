@@ -4,16 +4,15 @@ import React, { Component } from 'react';
 import '../../css/home/style.css';
 
 // used components
-import Header from '../layouts/main/Header';
-import Footer from '../layouts/main/Footer';
-import Home from './Home';
+import Header from '../layouts/default/Header';
+import Footer from '../layouts/default/Footer';
 
-export default class HomePage extends Component {
+export default class AdminPage extends Component {
     render() {
         return (
             <div className="container-sh">
                 <Header />
-                <Home />
+                    Admin page
                 <Footer />
             </div>
         );

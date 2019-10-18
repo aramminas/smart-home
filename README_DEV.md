@@ -28,3 +28,7 @@ and add in package.json file following code
 
 `npm install react-hook-form`
 
+`npm install --save firebase`
+
+`npm install --save react-toastify`
+
