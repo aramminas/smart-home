@@ -34,21 +34,21 @@ body {
 	  margin: 2px;
   }
   #button{
-	  border:	1px solid #7563D1;
+	  border:1px solid #7563D1;
 	  border-radius: 4px;
   }
   .p{
 	  margin: 5px;
 	  display: inline;
 	  color: white;
-	  font-size: 10px;
+	  font-size: 13px;
   }
   #text{
 	  width: 40%;
 	  text-align: center;
 	  margin:auto;
 	  position: relative;
-	  top: 100px;
+	  top: 30%;
 	  color: white;
 	  font-size: 20px; 
   }
@@ -87,7 +87,7 @@ body {
   }
   #img1{
 	  position: relative;
-	  width: 13%;
+	  width: 20%;
 	  bottom: 10%;
 	  left: 35%;
   }
@@ -98,9 +98,9 @@ body {
   }
   #img2{
 	  position: relative;
-	  width: 13%;
+	  width: 20%;
 	  bottom: 100%;
-	  left: 65%;
+	  left: 70%;
   }
   .shieldsRight{
 	  transform: skewY(5deg);
@@ -112,8 +112,8 @@ body {
 }
   #img3{
 	  position: relative;
-	  width: 13%;
-	  left: 25%;
+	  width: 20%;
+	  left: 12%;
   }
   #shield4{
 	  position: relative;
@@ -123,8 +123,8 @@ body {
   }
   #img4{
 	  position: relative;
-	  width: 13%;
-	  left: 55%;
+	  width: 20%;
+	  left: 47%;
 	  bottom: 110%;
   }
   #div3{
