@@ -10,18 +10,18 @@ export default class MainBody extends Component{
             <div>
                  <div id = "div1">
                     <div className = "shield shieldsLeft" id = "shield1">
-                        <img id = "img1" src = {icon1}></img>
+                        <img id = "img1" src = {icon1} alt = "icon1"></img>
                     </div>
                     <div className = "shield shieldsLeft" id = "shield2">
-                        <img id = "img2" src = {icon2}></img>
+                        <img id = "img2" src = {icon2} alt = "icon2"></img>
                     </div>
                 </div>
                 <div id = "div2">
                     <div className = "shield shieldsRight" id = "shield3">
-                        <img id = "img3" src = {icon3}></img>
+                        <img id = "img3" src = {icon3} alt = "icon3"></img>
                     </div>
                     <div className = "shield shieldsRight" id = "shield4">
-                        <img id = "img4" src = {icon4}></img>
+                        <img id = "img4" src = {icon4} alt = "icon4"></img>
                     </div>
                 </div>
             </div>

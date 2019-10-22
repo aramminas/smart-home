@@ -5,9 +5,7 @@ export default class Header extends Component{
     render(){
         return(
             <div id = "menubar">
-                <div className = "logo">
-                    <img id = "logo" src = {logo}></img>
-                </div>
+                <img id = "logo" src = {logo} alt = "logo"></img>
                 <a className = "p">HOME</a>
                 <a className = "p">CONTACTS</a>
                 <a className = "p">SHOP</a>
