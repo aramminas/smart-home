@@ -20,5 +20,15 @@ and add in package.json file following code
 
 ### You need to run the following commands
 
-`sudo a2enmod headers`
+`npm install react-bus`
+
+`npm install react-hook-form`
+
+`npm install --save firebase`
+
+`npm install --save react-toastify`
+
+`npm install react-burger-menu --save`
+
+`npm install react-loader-spinner --save`
 

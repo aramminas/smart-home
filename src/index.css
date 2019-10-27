@@ -13,17 +13,24 @@ body {
   }
   
   #header{
-	  background-image: url('./components/mainPage/Design_MainPage/Layer2.jpg');
+	  background-image: url('./components/Home/Design_MainPage/Layer2.jpg');
 	  background-repeat: no-repeat;
 	  background-size: 100%;
 	  height: 650px;
 	  width: 100%;
 	  z-index: 1;
   }
+  .logo{
+	  margin-left: 7px;
+  }
   #logo{
 	  position: relative;
 	  float: left;
-	  width: 70%;
+	  width: 50px;
+  }
+  .links-part{
+	  display: inline-block;
+	  margin-top: 6px;
   }
   .sticky {
 	position: fixed;
@@ -32,21 +39,36 @@ body {
   }
   #menubar{
 	  width: 100%;
-	  height: 15%;
+	  height: 50px;
 	  display: inline-block;
 	  text-align: right;
-	  margin: 2px;
+	  padding: 6px;
+	  background: rgba(0,0,0,.5);
+  }
+  .links-content{
+	  margin-right: 35px;
+  }
+  #login-title{
+	  text-align: center!important;
+	  font-size: 26px;
+	  margin-bottom: 15px;
   }
   #button{
 	  border:1px solid #7563D1;
 	  border-radius: 4px;
   }
-  .p{
+  #menubar a.links{
 	  margin: 5px;
 	  padding: 15px;
 	  display: inline;
 	  color: white;
-	  font-size: 13px;
+	  font-size: 14px;
+  }
+
+  #menubar a.links:hover {
+	  text-decoration: none;
+	  color: #5c4dff;
+	  cursor: pointer;
   }
   #text{
 	  width: 40%;
@@ -149,7 +171,7 @@ body {
 	left: 45%;
   }
   #div3{
-	  background-image: url('./components/mainPage/Design_MainPage/Layer3.jpg');
+	  background-image: url('./components/Home/Design_MainPage/Layer3.jpg');
 	  background-size: 100%;
 	  background-repeat: no-repeat; 
 	  width: 100%;
@@ -157,7 +179,7 @@ body {
   }
   #div4{
 	  position: relative;
-	  background-image: url('./components/mainPage/Design_MainPage/camera1.jpg');
+	  background-image: url('./components/Home/Design_MainPage/camera1.jpg');
 	  background-size: 100%;
 	  background-repeat: no-repeat;
 	  width: 100%;
@@ -170,8 +192,15 @@ body {
   #footer{
 	  background-color: black;
 	  width: 100%;
-	  height: 200px;
+	  height: 100px;
 	  opacity: 0.8;
+	  position: relative;
+  }
+  #footer .panel{
+	  padding: 35px;
+	  color: white;
+	  text-align: center;
+	  bottom: 0;
   }
   #sectionText{
 	  position: relative;
@@ -183,3 +212,25 @@ body {
 	  top: 20%;
 	  right: 5%;
   }
+
+  div.invalid-feedback{
+	  display: block;
+  }
+/* Loader */
+.loader-content{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+/* Loader End*/
+
+/* MEDIA */
+
+@media screen and (min-width: 320px) and (max-width: 560px) {
+	div.sign-up-body{
+		width: 300px;
+	}
+}

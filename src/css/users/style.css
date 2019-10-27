@@ -1,0 +1,10 @@
+.users-container {
+    background-image: url(/img/users-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+.users-content{
+    min-height: 100vh;
+}

@@ -1,41 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from "react-router-dom";
+import Login from '../../SignIn/Login';
+import logo from "../../Home/Design_MainPage/logo.png";
 
-import Logo from '../../Logo';
+import { stack as Menu } from 'react-burger-menu';
 
-export default class Header extends Component {
-    render() {
-        return (
-            <div id="header">
-                <Logo />
-                <div className="menuwrap">
-                    <ul>
-                        <li>
-                            <NavLink exact to="/">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/about">About Us</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contact">Contact</NavLink>
-                        </li>
-                    </ul>
-                </div>
-                <div className="metas">
-                    <div className="login l">
-                        <NavLink to="/login">
-                            <i className="fas fa-sign-in-alt"></i>
-                            Login
-                        </NavLink>
-                    </div>
-                    <div className="reg l">
-                        <NavLink to="/registration">
-                            <i className="fas fa-user"></i>
-                            Register
-                        </NavLink>
+import '../../../css/layouts/style.css';
+
+function  Header () {
+
+    return (
+        <div id="header-content">
+            <>
+                <div id="menubar">
+                    <div className={"links-content"}>
+                        <div className = "logo">
+                            <img id="logo" src={logo} alt={"logo"}/>
+                        </div>
+                        <div className={"links-part"}>
+                            <NavLink to={"/"} className="links">HOME</NavLink>
+                            <NavLink to={"/"} className="links">CONTACTS</NavLink>
+                            <NavLink to={"/"} className="links">SHOP</NavLink>
+                            <NavLink to={"/signup"} className="links">SIGN UP</NavLink>
+                            <Menu right width={"500px"} noOverlay>
+                                <Login/>
+                            </Menu>
+                        </div>
                     </div>
                 </div>
-            </div>
-        );
-    }
+            </>
+        </div>
+    );
 }
+
+export default Header;
