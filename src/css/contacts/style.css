@@ -94,3 +94,19 @@
 .contacts-content .loader-content{
     z-index: 9;
 }
+.contacts-part{
+    width: 80%;
+    padding: 20px;
+    margin: 30px auto;
+}
+.contacts-info{
+    height: 250px;
+    padding: 15px;
+    border-radius: 6px;
+    background: rgba(0,0,0,.5);
+}
+.contacts-data-part{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

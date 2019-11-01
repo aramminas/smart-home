@@ -114,12 +114,19 @@ function ContactsComponent() {
                             <div className="message-title">
                                 - Phone Numbers -
                             </div>
+                            <div className={"contacts-data-part"}>
+                                P: +374 (12) 48-16-32 <br />
+                                E: info@aca.am
+                            </div>
                         </div>
                     </Col>
                     <Col lg={6} md={6} sm={6} xs={12}>
                         <div className={"contacts-info"}>
                             <div className="message-title">
                                 - Address -
+                            </div>
+                            <div className={"contacts-data-part"}>
+                                3 Hakob Hakobyan,<br /> Yerevan, Armenia.
                             </div>
                         </div>
                     </Col>
