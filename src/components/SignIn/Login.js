@@ -4,7 +4,7 @@ import { Form, Button, Alert }  from 'react-bootstrap';
 import useForm from "react-hook-form";
 import Firebase  from "../../firebase_";
 
-function LogIn  ()  {
+function    LogIn  ()  {
     // Component local data
     const [fbError, setFbError] = useState('');
     const [adminId, setAdminId] = useState('');

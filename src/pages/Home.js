@@ -12,21 +12,21 @@ class Home extends Component{
     render(){
         return(
             <>
-                <div id = "header" >
-                    <Header />
-                    <HeaderText />
+                <div id="header">
+                    <Header/>
+                    <HeaderText/>
                 </div>
-                <div id = "main">
-                    <div id =  "container1">
-                        <MainBody />
+                <div id="main">
+                    <div id="container1">
+                        <MainBody/>
                     </div>
-                    <div id = "container2">
-                        <BodySection1 />
-                        <BodySection2 />
+                    <div id="container2">
+                        <BodySection1/>
+                        <BodySection2/>
                     </div>
                 </div>
-                <div id = "container3">
-                    <Footer />
+                <div id="container3">
+                    <Footer/>
                 </div>
             </>
         )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { NavLink, Redirect, useParams, useLocation, matchPath } from "react-router-dom";
 import Firebase  from "../../../firebase_";
 import logo from "../../Home/Design_MainPage/logo.png";
@@ -7,12 +7,22 @@ import { ToastContainer, toast } from 'react-toastify';
 function  Header () {
 // Component local data
     const [homePage, setHomePage] = useState(false);
+    const [closeContacts, setCloseContacts] = useState(true);
 
     const SignOut = (e) => {
         e.preventDefault();
         Firebase.doSignOut();
         setHomePage(true);
     };
+
+    useEffect(() => {
+        let currentUser = Firebase.getCurrentUser();
+        console.log('default - currentUser',currentUser);
+        if(match.path === '/admin'){
+            setCloseContacts(false);
+        }
+    });
+
     // get users or admin data by id
     let { pathname } = useLocation();
     let pattern = ['/user','/admin'];
@@ -64,9 +74,11 @@ function  Header () {
                             <img id="logo" src={logo} alt={"logo"}/>
                         </div>
                         <div className={"links-part"}>
-                            <NavLink to={`/user/${id}`} className="links">HOME</NavLink>
-                            <NavLink to={"/"} className="links">CONTACTS</NavLink>
-                            <NavLink to={"/"} className="links">SHOP</NavLink>
+                            <NavLink to={`/user/${id}`} exact className="links">HOME</NavLink>
+                            { closeContacts ?
+                                <NavLink to={"/contacts"} className="links">CONTACTS</NavLink>
+                                : null
+                            }
                             <a className="p sign-out-a links" href="/" onClick={SignOut}>SIGN OUT</a>
                         </div>
                     </div>

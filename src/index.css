@@ -65,7 +65,7 @@ body {
 	  font-size: 14px;
   }
 
-  #menubar a.links:hover {
+  #menubar a.links:hover, #menubar a.links.active {
 	  text-decoration: none;
 	  color: #5c4dff;
 	  cursor: pointer;
@@ -85,21 +85,30 @@ body {
   h1{
 	  font-size: 30px;
   }
+  #main{
+	  position: relative;
+  }
+  #container1{
+	  position: absolute;
+	  width: 100%;
+  }
+  #container1 .row{
+	  margin: 0;
+  }
+  #container1 > div > div{
+  	text-align: center;
+  }
   #div1{
 	  background:linear-gradient(90deg, #6437C8, #0271FE);
 	  height: 200px;
-	  width: 50%;
 	  transform: skewY(5deg);
-	  float: left;
 	  position: relative;
 	  top: -50px;
   }
   #div2{
 	  background:linear-gradient(90deg, #0271FE, #6437C8);
 	  height: 200px;
-	  width: 50%;
 	  transform: skewY(-5deg);
-	  float: right;
 	  position: relative;
 	  top: -50px;
   }
@@ -108,67 +117,38 @@ body {
   }
   #shield1{
 	  position: relative;
-	  width: 100%;
-	  height: 100%;
-	  float: left;
   }
   #img1{
 	  position: relative;
-	  width: 20%;
-	  bottom: 10%;
-	  left: 35%;
+	  bottom: 15px;
   }
-  #img1:hover{
-	width: 25%;
-	left: 33%;
+  #img1:hover,#img2:hover,
+  #img3:hover,#img4:hover{
+	width: 50%;
   }
   #shield2{
 	  position: relative;
-	  width: 100%;
-	  height: 100%;
   }
   #img2{
 	  position: relative;
-	  width: 20%;
-	  bottom: 100%;
-	  left: 70%;
-  }
-  #img2:hover{
-	width: 25%;
-	left: 68%;
+	  bottom: 15px;
   }
   .shieldsRight{
 	  transform: skewY(5deg);
   }	
   #shield3{
 	position: relative;
-	width: 100%;
-	height: 100%;
 }
   #img3{
 	  position: relative;
-	  width: 20%;
-	  left: 12%;
-  }
-  #img3:hover{
-	width: 25%;
-	left: 10%;
+	  bottom: 15px;
   }
   #shield4{
 	  position: relative;
-	  width: 100%;
-	  height: 100%;
-
   }
   #img4{
 	  position: relative;
-	  width: 20%;
-	  left: 47%;
-	  bottom: 110%;
-  }
-  #img4:hover{
-	width: 25%;
-	left: 45%;
+	  bottom: 15px;
   }
   #div3{
 	  background-image: url('./components/Home/Design_MainPage/Layer3.jpg');
@@ -188,6 +168,7 @@ body {
   #container2{
 	  position: relative;
 	  z-index: -1;
+	  padding-top: 90px;
   }
   #footer{
 	  background-color: black;

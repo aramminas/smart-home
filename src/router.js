@@ -6,10 +6,12 @@ import Home from "./pages/Home";
 import Users from "./pages/Users";
 import Admin from "./pages/Admin";
 import SignUp from "./pages/SignUp";
+import Contacts from "./pages/Contacts";
 
 const routes = (
     <Switch>
         <Route exact path="/" component={Home}/>
+        <Route path="/contacts" component={Contacts}/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/user/:id" component={Users}/>
         <Route path="/admin/:id" component={Admin}/>

@@ -26,6 +26,8 @@ class Firebase {
 
     doSignOut = () => this.auth.signOut();
 
+    getCurrentUser = () => this.auth.currentUser;
+
 }
 
 let FB = new Firebase();
