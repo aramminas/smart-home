@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 
 // used styles
-// import '../css/users/style.css';
+import '../css/contacts/style.css';
+import '../css/users/style.css';
 
 // used components
-import UsersComponent from '../components/users/UsersComponent';
+import Contacts from '../components/users/Contacts';
 import RightMenu from "../components/users/RightMenu";
 
-export default class Users extends Component {
+export default class UsersContacts extends Component {
     render() {
         return (
             <div className="users-container">
                 <div>
                     <RightMenu />
-                    <UsersComponent />
+                    <Contacts />
                 </div>
             </div>
         );

@@ -1,6 +1,7 @@
-import React,{ useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Form, Button, Alert, Row, Col }  from 'react-bootstrap';
 import useForm from "react-hook-form";
+import { useParams, useLocation, matchPath } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import Firebase  from "../../firebase_";
 
@@ -9,11 +10,12 @@ import Firebase  from "../../firebase_";
 // used components
 import Loader from 'react-loader-spinner';
 
-function ContactsComponent() {
-
+function ContactsComponent(props) {
     // Component local data
+    let initUser = {email: "", first_name: "", last_name: "", role: ""};
     const [fbError, setFbError] = useState('');
     const [showLoader, setShowLoader] = useState(false);
+    const [userDef, setUserDef] = useState(initUser);
 
     let val_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -22,12 +24,48 @@ function ContactsComponent() {
     const onSubmit = data => {
         setShowLoader(true);
         console.log('message data', data);
-
+        document.getElementById("message").submit();
     };
-    // Form part END
 
-    // Redirect to user page
+    // get users or admin data by id
+    let { pathname } = useLocation();
+    let pattern = ['/user','/admin'];
+    const match = matchPath(pathname, { path: pattern }) || {};
 
+    let { id } = useParams();
+    let database = {};
+    if(match.path === '/admin'){
+        database = Firebase.database.ref(`admin/${id}`);
+    }else if(match.path === '/user'){
+        database = Firebase.database.ref(`users/${id}`);
+    }else {
+        database = Firebase.database.ref(`users/${id}`);
+    }
+    let result = {};
+    useEffect(() => {
+        if(id !== undefined){
+            database.on("value", function(snapshot) {
+                result = snapshot.val();
+                if(!result){
+                    toast.warn("Such user was not found in the database !");
+                    Firebase.doSignOut();
+                }else {
+                    changeUserData(result);
+                }
+                console.log('result',result);
+            }, function (error) {
+                console.log("Error: " + error.code);
+                setFbError(fbError => {
+                    fbError = error.message;
+                    return fbError;
+                });
+            });
+        }
+    },[]);
+
+    const changeUserData = (data) => {
+        setUserDef(data);
+    };
 
     return (
         <>
@@ -62,24 +100,24 @@ function ContactsComponent() {
                                 </div>
                             </Col>
                             <Col lg={12} md={12} sm={12} xs={12}>
-                                <Form id="message" onSubmit={handleSubmit(onSubmit)}>
+                                <Form id="message" onSubmit={handleSubmit(onSubmit)} action="https://formspree.io/xzbpwkjk" method="POST">
                                     <Form.Group controlId="formMessageFirstName">
                                         <Form.Control type="text" placeholder="First Name" name="first_name"
-                                                      ref={register({required: true})}/>
+                                            defaultValue={userDef.first_name}  ref={register({required: true})}/>
                                         <Form.Control.Feedback type="invalid">
                                             {errors.first_name && 'First Name field is required.'}
                                         </Form.Control.Feedback>
                                     </Form.Group>
                                     <Form.Group controlId="formMessageLastName">
                                         <Form.Control type="text" placeholder="Last Name" name="last_name"
-                                                      ref={register({required: true})}/>
+                                            defaultValue={userDef.last_name} ref={register({required: true})}/>
                                         <Form.Control.Feedback type="invalid">
                                             {errors.last_name && 'Last Name field is required.'}
                                         </Form.Control.Feedback>
                                     </Form.Group>
                                     <Form.Group controlId="formMessageEmail">
                                         <Form.Control type="email" placeholder="What's your email?" name="email"
-                                                      ref={register({required: true, pattern: val_email})}/>
+                                            defaultValue={userDef.email} ref={register({required: true, pattern: val_email})}/>
                                         <Form.Control.Feedback type="invalid">
                                             {errors.email && 'Incorrect email address.'}
                                         </Form.Control.Feedback>
