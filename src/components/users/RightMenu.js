@@ -16,7 +16,6 @@ function RightMenu (){
     };
     useEffect(() => {
         let currentUser = Firebase.getCurrentUser();
-        console.log('default - currentUser',currentUser);
         if(match.path === '/admin'){
             setCloseContacts(false);
         }
@@ -41,7 +40,6 @@ function RightMenu (){
     }
 
     database.on("value", function(snapshot) {
-        console.log(snapshot.val());
         if(!snapshot.val()){
             toast.warn("Such user was not found in the database !");
             Firebase.doSignOut();
@@ -72,7 +70,7 @@ function RightMenu (){
                 pauseOnHover
             />
             <div className="sidenav">
-                <img src={Logo} id="logo_user" />
+                <img src={Logo} id="logo_user" alt={"logo"}/>
                 <NavLink to={`/user/${id}`} exact >Home</NavLink>
                 { closeContacts ?
                     <NavLink to={`/contact/${id}`} >Contacts</NavLink>

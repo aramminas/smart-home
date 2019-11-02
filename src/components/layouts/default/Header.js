@@ -17,7 +17,6 @@ function  Header () {
 
     useEffect(() => {
         let currentUser = Firebase.getCurrentUser();
-        console.log('default - currentUser',currentUser);
         if(match.path === '/admin'){
             setCloseContacts(false);
         }
