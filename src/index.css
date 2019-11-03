@@ -113,6 +113,8 @@ h1 {
 #container1 {
     position: absolute;
     width: 100%;
+    z-index: 2;
+    top: -65px;
 }
 
 #container1 .row {
@@ -222,10 +224,22 @@ h1 {
     height: 640px;
 }
 
+.carousel-content{
+    width: 50%;
+    position: absolute;
+    height: 640px;
+}
+
+.carousel-content div div div{
+    box-shadow: rgba(0, 0, 0, 0.4) 30px 0px 20px -20px, rgba(0, 0, 0, 0.4) -30px 0px 20px -20px;
+}
+
+.carousel-content #text{
+    top: 25px;
+}
+
 #container2 {
     position: relative;
-    z-index: -1;
-    padding-top: 90px;
 }
 
 #footer {
@@ -252,6 +266,10 @@ h1 {
     margin: 0 auto;
     top: 20%;
     right: 5%;
+}
+
+#sectionText p{
+    text-align: justify;
 }
 
 div.invalid-feedback {

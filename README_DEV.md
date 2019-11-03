@@ -32,3 +32,4 @@ and add in package.json file following code
 
 `npm install react-loader-spinner --save`
 
+`npm install react-card-carousel --save`
