@@ -121,18 +121,62 @@ body {
   #img1{
 	  position: relative;
 	  bottom: 15px;
+	  width: 50%;
+  }
+  #img1Empty{
+	  display: none;
+  }
+  .des{
+	  display: absolute;
+	  position: relative;
+	  bottom: 150px;
+	  font-size: 20px;
+	  width: 60%;
+	  margin: auto;
   }
   #img1:hover,#img2:hover,
   #img3:hover,#img4:hover{
-	width: 50%;
+	display: none;
   }
+  #img1:hover + #img1Empty{
+	  display: block;
+	  position: relative;
+	  bottom: 15px;
+	  width: 60%;
+	  left: 20%;
+  }
+  #img2:hover + #img2Empty{
+	display: block;
+	position: relative;
+	bottom: 15px;
+	width: 60%;
+	left: 20%;
+}
+#img3:hover + #img3Empty{
+	display: block;
+	position: relative;
+	bottom: 15px;
+	width: 60%;
+	left: 20%;
+}
+#img4:hover + #img4Empty{
+	display: block;
+	position: relative;
+	bottom: 15px;
+	width: 60%;
+	left: 20%;
+}
   #shield2{
 	  position: relative;
   }
   #img2{
 	  position: relative;
 	  bottom: 15px;
+	  width: 50%;
   }
+  #img2Empty{
+	display: none;
+}
   .shieldsRight{
 	  transform: skewY(5deg);
   }	
@@ -142,14 +186,22 @@ body {
   #img3{
 	  position: relative;
 	  bottom: 15px;
+	  width: 50%;
   }
+  #img3Empty{
+	display: none;
+}
   #shield4{
 	  position: relative;
   }
   #img4{
 	  position: relative;
 	  bottom: 15px;
+	  width: 50%;
   }
+  #img4Empty{
+	display: none;
+}
   #div3{
 	  background-image: url('./components/Home/Design_MainPage/Layer3.jpg');
 	  background-size: 100%;
