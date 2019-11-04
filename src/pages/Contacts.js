@@ -6,6 +6,7 @@ import Header from '../components/layouts/main/Header';
 import HeaderText from "../components/Home/HeaderText";
 import ContactsComponent from "../components/Contacts/ContactsComponent";
 import Footer from '../components/layouts/main/Footer';
+import Support from "../components/support/Sopport";
 
 
 function Contacts  ()  {
@@ -20,6 +21,9 @@ function Contacts  ()  {
                     - Have Some Questions? -
                 </div>
                 <ContactsComponent />
+            </div>
+            <div className={"support-content"}>
+                <Support />
             </div>
             <Footer />
         </div>

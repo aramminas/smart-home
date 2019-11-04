@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 // used components
 import UsersComponent from '../components/users/UsersComponent';
 import RightMenu from "../components/users/RightMenu";
+import Support from "../components/support/Sopport";
 
 export default class Users extends Component {
     render() {
@@ -14,6 +15,9 @@ export default class Users extends Component {
                 <div>
                     <RightMenu />
                     <UsersComponent />
+                </div>
+                <div className={"support-content"}>
+                    <Support />
                 </div>
             </div>
         );

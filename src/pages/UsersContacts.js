@@ -7,6 +7,7 @@ import '../css/users/style.css';
 // used components
 import Contacts from '../components/users/Contacts';
 import RightMenu from "../components/users/RightMenu";
+import Support from "../components/support/Sopport";
 
 export default class UsersContacts extends Component {
     render() {
@@ -15,6 +16,9 @@ export default class UsersContacts extends Component {
                 <div>
                     <RightMenu />
                     <Contacts />
+                </div>
+                <div className={"support-content"}>
+                    <Support />
                 </div>
             </div>
         );

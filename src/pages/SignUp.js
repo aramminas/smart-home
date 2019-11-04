@@ -6,6 +6,7 @@ import Header from '../components/layouts/main/Header';
 import SignUpComponent from "../components/SignUp/SignUpComponent";
 import HeaderText from "../components/Home/HeaderText";
 import Footer from '../components/layouts/main/Footer';
+import Support from "../components/support/Sopport";
 
 
 function SignUp  ()  {
@@ -20,6 +21,9 @@ function SignUp  ()  {
                     - Sign Up -
                 </div>
                 <SignUpComponent />
+            </div>
+            <div className={"support-content"}>
+                <Support />
             </div>
             <Footer />
         </div>

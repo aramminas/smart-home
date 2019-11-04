@@ -217,15 +217,20 @@ h1 {
 
 #div4 {
     position: relative;
-    background-image: url('./components/Home/Design_MainPage/camera1.jpg');
+    background-image: url('./components/Home/Design_MainPage/camera.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
     height: 640px;
 }
 
+#div4 .delete-default-style{
+    margin: unset;
+    padding: unset;
+}
+
 .carousel-content{
-    width: 50%;
+    width: 100%;
     position: absolute;
     height: 640px;
 }
@@ -262,10 +267,41 @@ h1 {
     width: 35%;
     float: right;
     color: white;
-    text-align: center;
     margin: 0 auto;
     top: 20%;
     right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+.info-text-body{
+    height: 100%;
+}
+
+.info-ul span{
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #8cfff7;
+}
+.info-ul span:hover{
+    cursor: pointer;
+}
+
+.info-ul p{
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.info-text-content {
+    position: relative;
+    color: white;
+    margin: 0 auto;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
 }
 
 #sectionText p{
@@ -287,6 +323,54 @@ div.invalid-feedback {
 }
 
 /* Loader End*/
+
+/* Support */
+.support-content{
+    position: fixed;
+    z-index: 9;
+    width: 130px;
+    height: 100px;
+    left: 92%;
+    bottom: 15px;
+}
+
+.support-content:hover .icon1{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.icon1 {
+    -webkit-animation: blinking 4s infinite;
+    -moz-animation:    blinking 4s infinite;
+    -o-animation:      blinking 4s infinite;
+    animation:         blinking 4s infinite;
+}
+
+@-webkit-keyframes blinking {
+    0%   { opacity: 0.3; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+@-moz-keyframes blinking {
+    0%   { opacity: 0.3; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+@-o-keyframes blinking {
+    0%   { opacity: 0.3; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+@keyframes blinking {
+    0%   { opacity: 0.3; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Support End*/
 
 /* MEDIA */
 

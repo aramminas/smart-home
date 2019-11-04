@@ -3,6 +3,11 @@ import ReactCardCarousel from "react-card-carousel";
 
 class CarouselComponent extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { autoplay : true };
+    }
+
     static get CONTAINER_STYLE() {
         return {
             position: "unset",
@@ -57,10 +62,14 @@ class CarouselComponent extends Component {
         };
     }
 
+    componentWillUnmount(){
+        this.setState({autoplay : false});
+    }
+    
     render() {
         return (
             <div style={CarouselComponent.CONTAINER_STYLE}>
-                <ReactCardCarousel autoplay={true} autoplay_speed={3000}>
+                <ReactCardCarousel autoplay={this.state.autoplay} autoplay_speed={3000}>
                     <div style={CarouselComponent.CARD_STYLE}>
                         <img style={CarouselComponent.IMAGE_STYLE} src="/img/carousel/wifi.jpeg" alt="Carousel"/>
                         <div style={CarouselComponent.DESCRIPTION_STYLE}>Full control via wifi devices</div>
@@ -84,18 +93,3 @@ class CarouselComponent extends Component {
 }
 
 export default CarouselComponent;
-/*
-render() {
-    return (
-        <div style={CarouselComponent.CONTAINER_STYLE}>
-            <ReactCardCarousel autoplay={true} autoplay_speed={55000000}>
-                <div style={CarouselComponent.CARD_STYLE}>First Card</div>
-                <div style={CarouselComponent.CARD_STYLE}>Second Card</div>
-                <div style={CarouselComponent.CARD_STYLE}>Third Card</div>
-                <div style={CarouselComponent.CARD_STYLE}>Fourth Card</div>
-                <div style={CarouselComponent.CARD_STYLE}>Fifth Card</div>
-            </ReactCardCarousel>
-        </div>
-    );
-}
-*/
