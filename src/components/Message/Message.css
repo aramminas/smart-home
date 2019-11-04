@@ -33,9 +33,19 @@
 
 }
 
+.form_message .message_admin {
+    margin-right: auto;
+    margin-left: unset;
+}
+
 .message_user {
     background-color: rgba(193, 223, 248, 0.7);
     margin-right: auto;
+}
+
+.form_message .message_user {
+    margin-left: auto;
+    margin-right: unset;
 }
 
 .form_message1 .message_user{
