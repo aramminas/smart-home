@@ -9,7 +9,7 @@ export default class Footer extends Component {
             <div id="footer" className="ifooter">
                 <div className="panel">
                     <div className="copy">
-                        © <Moment format="YYYY">{date}</Moment>Armenian Code Academy. All rights reserved.
+                        © <Moment format="YYYY">{date}</Moment> Armenian Code Academy. All rights reserved.
                     </div>
                 </div>
             </div>

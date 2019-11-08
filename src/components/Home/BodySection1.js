@@ -1,16 +1,15 @@
 import React, {Component, useState} from 'react';
 import { Row, Col }  from 'react-bootstrap';
-import CarouselComponent from "../carousel/CarouselComponent";
 
 export default function BodySection1 (){
 
     let initStyle1 = {
         info1: true,
-        infoStyle1: "50px",
+        infoStyle1: "60px",
     };
     let initStyle2 = {
         info2: true,
-        infoStyle2: "50px"
+        infoStyle2: "60px"
     };
 
     const [infoStyle1,setInfoStyle1] = useState(initStyle1);
@@ -41,7 +40,7 @@ export default function BodySection1 (){
             setInfoStyle1(infoStyle1=>{
                 infoStyle1 = {
                     info1: true,
-                    infoStyle1: "50px",
+                    infoStyle1: "60px",
                 };
                 return infoStyle1;
             });
@@ -49,7 +48,7 @@ export default function BodySection1 (){
             setInfoStyle2(infoStyle2=>{
                 infoStyle2 = {
                     info2: true,
-                    infoStyle2: "50px",
+                    infoStyle2: "60px",
                 };
                 return infoStyle2;
             });

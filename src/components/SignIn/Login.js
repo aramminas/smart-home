@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Form, Button, Alert }  from 'react-bootstrap';
 import useForm from "react-hook-form";
 import Firebase  from "../../firebase_";
+import { ToastContainer, toast } from 'react-toastify';
 
 function    LogIn  ()  {
     // Component local data
@@ -16,14 +17,28 @@ function    LogIn  ()  {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
         Firebase.doSignInWithEmailAndPassword(data.email,data.password).then(response => {
+            let database = {};
             let uid = response.user.uid;
             if(data.role === '2'){
                 setUserId(uid);
-                setUserPage(true);
+                database = Firebase.database.ref(`users/${uid}`);
             }else if(data.role === '1'){
                 setAdminId(uid);
-                setAdminPage(true);
+                database = Firebase.database.ref(`admin/${uid}`);
             }
+            // validation of user data depending on the selected role
+            database.on("value", function(snapshot) {
+                if(!snapshot.val()){
+                    toast.warn("User is not found.\n Please check your role !");
+                    Firebase.doSignOut();
+                }else if(data.role === '2'){
+                    setUserPage(true);
+                }else if(data.role === '1'){
+                    setAdminPage(true);
+                }
+            }, function (error) {
+                console.log("Error: " + error.code);
+            });
         }).catch(error => {
             console.log('error',error);
             setFbError(fbError => {
@@ -45,6 +60,17 @@ function    LogIn  ()  {
 
     return (
         <>
+            <ToastContainer
+                position="top-center"
+                autoClose={2900}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnVisibilityChange
+                draggable
+                pauseOnHover
+            />
             <div id="login-title">
                 Login
             </div>
@@ -84,5 +110,5 @@ function    LogIn  ()  {
         </>
     );
 
-};
+}
 export default LogIn;

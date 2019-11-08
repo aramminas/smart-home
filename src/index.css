@@ -291,6 +291,7 @@ h1 {
 .info-ul p{
     overflow: hidden;
     margin-bottom: 5px;
+    font-size: 20px;
 }
 
 .info-text-content {
