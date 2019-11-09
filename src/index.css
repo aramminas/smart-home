@@ -374,7 +374,310 @@ div.invalid-feedback {
 /* Support End*/
 
 /* MEDIA */
-
+@media screen and (min-width: 1250px) and (max-width: 1530px) {
+    .support-content {
+        left: 90%;
+    }
+    .des {
+        bottom: 140px;
+        font-size: 17px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img{
+        width: 56%;
+    }
+}
+@media screen and (min-width: 1250px) and (max-width: 1330px) {
+    #container1 {
+        top: 0;
+    }
+    #div3 {
+        height: 800px;
+    }
+    #div4 {
+        height: 600px;
+    }
+    .carousel-content {
+        height: 600px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 64%;
+    }
+}
+@media screen and (min-width: 1165px) and (max-width: 1249px) {
+    .support-content {
+        left: 88%;
+    }
+    #div3 {
+        height: 675px;
+    }
+    #div4 {
+        height: 560px;
+    }
+    .carousel-content {
+        height: 540px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 74%;
+    }
+    .des {
+        bottom: 150px;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1164px) {
+    .support-content {
+        left: 88%;
+    }
+    #div3 {
+        height: 675px;
+    }
+    #div4 {
+        height: 480px;
+    }
+    .carousel-content {
+        height: 540px;
+    }
+    .carousel-content #text{
+        width: 60%;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 90%;
+    }
+    .des {
+        bottom: 158px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 999px) {
+    .support-content {
+        left: 85%;
+    }
+    .carousel-content #text{
+        width: 100%;
+    }
+    #header {
+        height: 550px;
+    }
+    #div3 {
+        height: 540px;
+    }
+    #div4 {
+        height: 380px;
+    }
+    .carousel-content {
+        height: 400px;
+    }
+    #div1, #div2 {
+        height: 145px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 90%;
+    }
+    .des {
+        bottom: 135px;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .support-content {
+        left: 82%;
+    }
+    .carousel-content #text{
+        width: 100%;
+    }
+    #header {
+        height: 480px;
+    }
+    #div3 {
+        height: 470px;
+    }
+    #div4 {
+        height: 335px;
+    }
+    .carousel-content {
+        height: 355px;
+    }
+    #div1, #div2 {
+        height: 130px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 100%;
+        bottom: 0;
+    }
+    .des {
+        bottom: 85px;
+        font-size: 14px;
+        width: 80%;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 699px) {
+    .support-content {
+        left: 76%;
+    }
+    .support-content .icon1 {
+        width: 110px;
+    }
+    .carousel-content #text{
+        width: 100%;
+        top: 25px;
+    }
+    .carousel-content #text h1{
+        font-size: 22px;
+    }
+    #header {
+        height: 385px;
+    }
+    #div3 {
+        height: 335px;
+    }
+    #div4 {
+        height: 240px;
+    }
+    .carousel-content {
+        height: 305px;
+    }
+    #div1, #div2 {
+        height: 130px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 100%;
+        bottom: -15px;
+    }
+    .des {
+        bottom: 56px;
+        font-size: 12px;
+        width: 80%;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 499px) {
+    #header #text{
+        width: 50%;
+    }
+    #header #text h1{
+        font-size: 25px;
+    }
+    .carousel-content #text{
+        width: 100%;
+    }
+    .carousel-content #text h1{
+        font-size: 17px;
+    }
+    .support-content {
+        left: 70%;
+    }
+    .support-content .icon1 {
+        width: 105px;
+    }
+    #header {
+        height: 325px;
+    }
+    #div3 {
+        height: 270px;
+    }
+    #div4 {
+        height: 500px;
+        background-size: 100% 100%;
+    }
+    .carousel-content {
+        height: 305px;
+        position: inherit;
+    }
+    #div1, #div2 {
+        height: 130px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 100%;
+        bottom: -15px;
+    }
+    .des {
+        bottom: 56px;
+        font-size: 12px;
+        width: 80%;
+    }
+    .info-ul p {
+        font-size: 14px;
+    }
+    #sectionText {
+        width: 95%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 399px) {
+    .support-content {
+        left: 62%;
+    }
+    .support-content .icon1 {
+        width: 100px;
+    }
+    .links-content {
+        margin-right: 0;
+    }
+    #menubar a.links {
+        padding: 0;
+        font-size: 12px;
+    }
+    .links-part {
+        margin-right: 37px;
+    }
+    #header #text{
+        width: 100%;
+        top: 9%;
+    }
+    #header #text h1{
+        font-size: 25px;
+    }
+    .carousel-content #text{
+        width: 100%;
+    }
+    .carousel-content #text h1{
+        font-size: 17px;
+    }
+    #header {
+        height: 230px;
+    }
+    #div3 {
+        height: 215px;
+    }
+    #div4 {
+        height: 500px;
+        background-size: 100% 100%;
+    }
+    .carousel-content {
+        height: 305px;
+        position: inherit;
+    }
+    #div1, #div2 {
+        height: 75px;
+    }
+    #img1, #img2, #img3, #img4,
+    #img1Empty img, #img2Empty img, #img3Empty img, #img4Empty img {
+        width: 100%;
+        bottom: -5px;
+    }
+    .des {
+        bottom: 45px;
+        font-size: 9px;
+        width: 80%;
+    }
+    .info-ul p {
+        font-size: 14px;
+    }
+    #sectionText {
+        width: 95%;
+    }
+    #container1 {
+        top: -15px;
+    }
+    #shield1,#shield2,#shield3,#shield4{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
 @media screen and (min-width: 320px) and (max-width: 560px) {
 	div.sign-up-body{
 		width: 300px;

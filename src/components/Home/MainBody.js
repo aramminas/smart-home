@@ -12,14 +12,14 @@ function MainBody () {
         <Row>
             <Col lg={6} md={6} sm={6} xs={6} id="div1">
                 <Row>
-                    <Col lg={{size:6}} md={{size:6}} sm={{size:6}} xs={{size:6}} className="shield shieldsLeft" id="shield1">
+                    <Col lg={6} md={6} sm={6} xs={6} className="shield shieldsLeft" id="shield1">
                         <img id="img1" src={icon1} alt="icon1"/>
                         <div id="img1Empty">
                             <img id="image1Empty" src={empty} alt="icon_empty"/>
                             <h1 className = "des">WIFI Connection</h1>
                         </div>
                     </Col>
-                    <Col lg={{size:6}} md={{size:6}} sm={{size:6}} xs={{size:6}} className="shield shieldsLeft" id="shield2">
+                    <Col lg={6} md={6} sm={6} xs={6} className="shield shieldsLeft" id="shield2">
                         <img id="img2" src={icon2} alt="icon2"/>
                         <div id="img2Empty">
                             <img id="image2Empty" src={empty} alt="icon_empty"/>

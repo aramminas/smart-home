@@ -87,12 +87,12 @@ function ContactsComponent(props) {
                     pauseOnHover
                 />
                 <Row>
-                    <Col lg={6} md={6} sm={6} xs={12} className={"letter-container"}>
+                    <Col lg={6} md={6} sm={12} xs={12} className={"letter-container"}>
                         <div className={"letter-content"}>
                             <img src="/img/letter.svg" alt="letter"/>
                         </div>
                     </Col>
-                    <Col lg={6} md={6} sm={6} xs={12} className={"message-container"}>
+                    <Col lg={6} md={6} sm={12} xs={12} className={"message-container"}>
                         <Row>
                             <Col lg={12} md={12} sm={12} xs={12}>
                                 <div className="message-title">

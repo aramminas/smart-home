@@ -8,6 +8,7 @@ function  Header () {
 // Component local data
     const [homePage, setHomePage] = useState(false);
     const [closeContacts, setCloseContacts] = useState(true);
+    let currentRole = '';
 
     const SignOut = (e) => {
         e.preventDefault();
@@ -31,8 +32,10 @@ function  Header () {
     let database = {};
     if(match.path === '/admin'){
         database = Firebase.database.ref(`admin/${id}`);
+        currentRole = 'admin';
     }else if(match.path === '/user'){
         database = Firebase.database.ref(`users/${id}`);
+        currentRole = 'user';
     }
 
     database.on("value", function(snapshot) {
@@ -73,7 +76,7 @@ function  Header () {
                             <img id="logo" src={logo} alt={"logo"}/>
                         </div>
                         <div className={"links-part"}>
-                            <NavLink to={`/user/${id}`} exact className="links">HOME</NavLink>
+                            <NavLink to={`/${currentRole}/${id}`} exact className="links">HOME</NavLink>
                             { closeContacts ?
                                 <NavLink to={"/contacts"} className="links">CONTACTS</NavLink>
                                 : null

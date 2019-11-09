@@ -24,6 +24,13 @@ export default function BodySection1 (){
                 };
                 return infoStyle1;
             });
+            setInfoStyle2(infoStyle2=>{
+                infoStyle2 = {
+                    info2: true,
+                    infoStyle2: "60px",
+                };
+                return infoStyle2;
+            });
         }else if(text === 2){
             setInfoStyle2(infoStyle2=>{
                 infoStyle2 = {
@@ -31,6 +38,13 @@ export default function BodySection1 (){
                     infoStyle2: "auto",
                 };
                 return infoStyle2;
+            });
+            setInfoStyle1(infoStyle1=>{
+                infoStyle1 = {
+                    info1: true,
+                    infoStyle1: "60px",
+                };
+                return infoStyle1;
             });
         }
     };
@@ -59,7 +73,7 @@ export default function BodySection1 (){
         <div id="div3">
             <div id="sectionText">
                 <Row className={"delete-default-style info-text-body"}>
-                    <Col lg={{size:6}} md={{size:6}} sm={{size:6}} xs={{size:6}} className={"delete-default-style"}>
+                    <Col lg={6} md={6} sm={6} xs={12} className={"delete-default-style"}>
                         <div className={"info-text-content"}>
                             <ul className={"info-ul"}>
                                 <li>
@@ -72,7 +86,7 @@ export default function BodySection1 (){
                                         connection.
                                     </p>
                                     {infoStyle1.info1 ?
-                                        <span onClick={()=>showMore(1)} >More Info</span>
+                                        <span onClick={()=>showMore(1)} >Read more</span>
                                         : <span onClick={()=>hideText(1)}>Hide</span>
                                     }
                                 </li>
@@ -83,7 +97,7 @@ export default function BodySection1 (){
                                         access control and central locking of all perimeter doors and windows.
                                     </p>
                                     {infoStyle2.info2 ?
-                                        <span onClick={()=>showMore(2)} >More Info</span>
+                                        <span onClick={()=>showMore(2)} >Read more</span>
                                         : <span onClick={()=>hideText(2)}>Hide</span>
                                     }
                                 </li>
