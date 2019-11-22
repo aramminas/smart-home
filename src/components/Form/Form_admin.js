@@ -22,7 +22,7 @@ export default function Form_admin(props) {
     function displayMessages(messageId) {
         setCurrent(messageId);
         fire.database.ref('messages/' + messageId).on("value", snapshot => {
-            console.log(snapshot.val())
+            // console.log(snapshot.val())
             setReplies(Object.values(snapshot.val()));
             setShowMessages(!showMessages);
         })
@@ -53,7 +53,7 @@ export default function Form_admin(props) {
             .limitToLast(30)
             .on('value', message => {
                 if (message.val && message.val()) {
-                    console.log(message.val())
+                    // console.log(message.val())
                     setList(message.val());
 
                 } else {

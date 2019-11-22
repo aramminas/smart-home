@@ -41,9 +41,9 @@ function CarouselComponent () {
         carousel_height = 140;
         carousel_fontSize = 15;
     }
-    console.log('width',width);
-    console.log('carousel_width',carousel_width);
-    console.log('carousel_height',carousel_height);
+    // console.log('width',width);
+    // console.log('carousel_width',carousel_width);
+    // console.log('carousel_height',carousel_height);
 
     const CONTAINER_STYLE =  {
             position: "unset",
