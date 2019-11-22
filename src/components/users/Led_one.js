@@ -4,10 +4,10 @@ import fire from '../../firebase_.js';
 
 
 function Light(props) {
-  const [toggleState1, setToggleState1] = useState("off");
-  const [toggleState2, setToggleState2] = useState("off");
-  const [toggleState3, setToggleState3] = useState("off");
-  const [toggleState4, setToggleState4] = useState("off");
+  const [toggleState1, setToggleState1] = useState("on");
+  const [toggleState2, setToggleState2] = useState("on");
+  const [toggleState3, setToggleState3] = useState("on");
+  const [toggleState4, setToggleState4] = useState("on");
   let LED_STATUS_1;
   let LED_STATUS_2;
   let LED_STATUS_3;

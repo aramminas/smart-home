@@ -3,7 +3,7 @@ import mostlySunny from './img/mostlySunny.svg';
 import sunny from './img/sunny.svg';
 import partlySunny from './img/partlySunny.svg';
 import mostlyCloudy from './img/mostlyCloudy.svg';
-
+import nightCloud from './img/nightCloud.svg';
 
 
 function Weather(props) {
@@ -12,7 +12,7 @@ function Weather(props) {
     const [night, setNight] = useState("");
     const [tempMin, setTemp] = useState("");
     const [imgDay,setImgDay]=useState("/img/users/sunny.svg");
-
+    const [imgNight,setImgNight]=useState("/img/users/nightCloud.svg");
 
     useEffect(() => {
         async function fetchData() {
@@ -27,6 +27,7 @@ function Weather(props) {
             setDay(dailyData);
             setNight(nightX);
             setTemp(temperMin);
+
 
             if(day ==='Sunny'){
                 setImgDay(imgDay => {
@@ -45,6 +46,11 @@ function Weather(props) {
                 });
             }
         }
+setImgNight(imgNight => {imgNight = nightCloud ; 
+        return imgNight;
+    }
+)
+
         fetchData();
     }, [day]);
 
@@ -60,9 +66,10 @@ function Weather(props) {
                 <div>
                 <span>Night :</span>
                 <span>{night}</span>
+                <img src={imgNight} width="30px" height="30px"/>
                 </div>
                 <div>
-                <span>{((tempMin) - 32) * 1.8} C</span>
+                <span>{Math.floor(((tempMin) - 32) * 1.8)} C</span>
                 </div>
             </div>
         </div>

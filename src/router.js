@@ -24,4 +24,4 @@ const routes = (
     </Suspense>
 );
 
-export default routes
+export default routes;
