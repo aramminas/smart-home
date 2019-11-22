@@ -29,7 +29,7 @@
     align-items: flex-end;
     align-content: flex-end;
     margin-left: auto;
-    background-color: rgba(125, 127, 230, 0.74);
+    background-color: rgba(125, 127, 230);
 
 }
 
@@ -39,7 +39,7 @@
 }
 
 .message_user {
-    background-color: rgba(193, 223, 248, 0.7);
+    background-color: rgba(193, 223, 248);
     margin-right: auto;
 }
 
@@ -49,6 +49,6 @@
 }
 
 .form_message1 .message_user{
-    background-color: rgba(64, 168, 255, 0.7);
+    background-color: rgba(64, 168, 255);
     color: rgba(0, 0, 0, 0.89);
 }
