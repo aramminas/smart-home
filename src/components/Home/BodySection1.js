@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import { Row, Col }  from 'react-bootstrap';
 
 export default function BodySection1 (){

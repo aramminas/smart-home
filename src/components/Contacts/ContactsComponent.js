@@ -10,14 +10,14 @@ import Firebase  from "../../firebase_";
 // used components
 import Loader from 'react-loader-spinner';
 
-function ContactsComponent(props) {
+function ContactsComponent() {
     // Component local data
     let initUser = {email: "", first_name: "", last_name: "", role: ""};
     const [fbError, setFbError] = useState('');
     const [showLoader, setShowLoader] = useState(false);
     const [userDef, setUserDef] = useState(initUser);
 
-    let val_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let val_email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     // Form part
     const {register, handleSubmit, errors} = useForm();
@@ -41,18 +41,17 @@ function ContactsComponent(props) {
     }else {
         database = Firebase.database.ref(`users/${id}`);
     }
-    let result = {};
+
     useEffect(() => {
         if(id !== undefined){
             database.on("value", function(snapshot) {
-                result = snapshot.val();
+                let result = snapshot.val();
                 if(!result){
                     toast.warn("Such user was not found in the database !");
                     Firebase.doSignOut();
                 }else {
                     changeUserData(result);
                 }
-                console.log('result',result);
             }, function (error) {
                 console.log("Error: " + error.code);
                 setFbError(fbError => {

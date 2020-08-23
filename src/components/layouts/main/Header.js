@@ -1,8 +1,8 @@
-import React, { useLayoutEffect, useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import Login from '../../SignIn/Login';
 import logo from "../../Home/Design_MainPage/logo.png";
-import Firebase from "../../../firebase_";
+// import Firebase from "../../../firebase_";
 import { stack as Menu } from 'react-burger-menu';
 import  useWindowSize   from '../../../helpers/WindowSize';
 
@@ -14,9 +14,9 @@ function  Header () {
     let login_width =  width > 500 ? 500 : width;
 
     useEffect(() => {
-        let user = Firebase.getCurrentUser();
-        console.log('user',user);
-    });
+        // let user = Firebase.getCurrentUser();
+        // console.log('user',user);
+    },[]);
 
     return (
         <div id="header-content">

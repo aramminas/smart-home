@@ -18,7 +18,7 @@ function Support() {
         if (showChat === true) {
             listRef.current.scrollTop = listRef.current.scrollHeight;
         }
-    });
+    },[]);
 
 
     return (

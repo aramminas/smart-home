@@ -15,7 +15,7 @@ function RightMenu (){
         setHomePage(true);
     };
     useEffect(() => {
-        let currentUser = Firebase.getCurrentUser();
+        // let currentUser = Firebase.getCurrentUser();
         if(match.path === '/admin'){
             setCloseContacts(false);
         }

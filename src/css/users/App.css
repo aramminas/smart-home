@@ -50,6 +50,7 @@ html,body {
    flex-direction: column;
     margin-left: 160px; 
     padding: 0px 10px;
+  background-color:#36a2ff;
 }
 
 .grid-container > div {

@@ -3,7 +3,7 @@ import './Form_admin.css';
 import Message_admin from '../Message/Message_admin';
 import fire from "../../firebase_";
 
-export default function Form_admin(props) {
+export default function Form_admin() {
 
     const [userName] = useState("Admin");
     const [response, setResponse] = useState("");
@@ -15,9 +15,9 @@ export default function Form_admin(props) {
     let messagesRef = useRef(fire.database.ref('messages'));
     let listRef = useRef(null);
 
-    function openMessages() {
-        setShowMessages(!showMessages);
-    }
+    // function openMessages() {
+    //     setShowMessages(!showMessages);
+    // }
 
     function displayMessages(messageId) {
         setCurrent(messageId);

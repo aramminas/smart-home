@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import mostlySunny from './img/mostlySunny.svg';
-import sunny from './img/sunny.svg';
-import partlySunny from './img/partlySunny.svg';
-import mostlyCloudy from './img/mostlyCloudy.svg';
+// import mostlySunny from './img/mostlySunny.svg';
+// import sunny from './img/sunny.svg';
+// import partlySunny from './img/partlySunny.svg';
+// import mostlyCloudy from './img/mostlyCloudy.svg';
 import nightCloud from './img/nightCloud.svg';
 
 
-function Weather(props) {
+function Weather() {
 
     const [day, setDay] = useState("");
     const [night, setNight] = useState("");
@@ -46,10 +46,10 @@ function Weather(props) {
                 });
             }
         }
-setImgNight(imgNight => {imgNight = nightCloud ; 
-        return imgNight;
-    }
-)
+        setImgNight(imgNight => {imgNight = nightCloud ;
+                return imgNight;
+            }
+        )
 
         fetchData();
     }, [day]);
@@ -61,12 +61,12 @@ setImgNight(imgNight => {imgNight = nightCloud ;
                 <div>
                 <span>Day :</span>
                 <span>{day}</span>
-                <img src={`${imgDay}`} width="30px" height="30px"/>
+                <img src={`${imgDay}`} alt={"weather"} width="30px" height="30px"/>
                 </div>
                 <div>
                 <span>Night :</span>
                 <span>{night}</span>
-                <img src={imgNight} width="30px" height="30px"/>
+                <img src={imgNight} alt={"weather"} width="30px" height="30px"/>
                 </div>
                 <div>
                 <span>{Math.floor(((tempMin) - 32) * 1.8)} C</span>

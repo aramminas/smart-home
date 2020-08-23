@@ -22,13 +22,13 @@ function Fans () {
             <h2>Fans</h2>
             <div className="container_f">
                 <p>Room1</p>
-                <img src={vint} width="50" height="50" className={`fan ${toggleState1}`} onClick={toggle1}/>
+                <img src={vint} width="50" height="50" className={`fan ${toggleState1}`} alt={"room"} onClick={toggle1}/>
                 <p>Room2</p>
-                <img src={vint} width="50" height="50" className={toggleState2} onClick={toggle2}/>
+                <img src={vint} width="50" height="50" className={toggleState2} alt={"room"} onClick={toggle2}/>
                 <p>Room3</p>
-                <img src={vint} width="50" height="50" className={toggleState3} onClick={toggle3}/>
+                <img src={vint} width="50" height="50" className={toggleState3} alt={"room"} onClick={toggle3}/>
                 <p>Room4</p>
-                <img src={vint} width="50" height="50" className={toggleState4} onClick={toggle4}/>
+                <img src={vint} width="50" height="50" className={toggleState4} alt={"room"} onClick={toggle4}/>
             </div>
         </div>
     )

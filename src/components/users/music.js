@@ -26,13 +26,13 @@ function Music (){
            <h2>Doors</h2> 
             <div className="container">
             <p>Room1</p>
-                <img src={toggleState1} width="50" height="50"  onClick={toggle1}/>
+                <img src={toggleState1} width="50" height="50" alt={"music"}  onClick={toggle1}/>
                 <p>Room2</p>
-                <img src={toggleState2} width="50" height="50"  onClick={toggle2}/>
+                <img src={toggleState2} width="50" height="50" alt={"music"} onClick={toggle2}/>
                 <p>Room3</p>
-                <img src={toggleState3} width="50" height="50"  onClick={toggle3}/>
+                <img src={toggleState3} width="50" height="50" alt={"music"} onClick={toggle3}/>
                 <p>Room4</p>
-                <img src={toggleState4} width="50" height="50"  onClick={toggle4}/>
+                <img src={toggleState4} width="50" height="50" alt={"music"} onClick={toggle4}/>
             </div>
      </div>
     )

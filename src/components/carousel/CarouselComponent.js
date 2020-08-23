@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactCardCarousel from "react-card-carousel";
 import  useWindowSize   from '../../helpers/WindowSize';
 
